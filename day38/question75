@@ -1,0 +1,69 @@
+/*Q75: Add two matrices.
+
+
+Sample Test Cases:
+Input 1:
+2 2
+1 2
+3 4
+2 2
+5 6
+7 8
+Output 1:
+6 8
+10 12
+
+*/
+#include <stdio.h>
+
+int main()
+{
+    int r, c;
+    int A[100][100], B[100][100], C[100][100];
+
+    // Matrix 1 ka size
+    scanf("%d %d", &r, &c);
+
+    // Matrix 1 input
+    for(int i = 0; i < r; i++)
+    {
+        for(int j = 0; j < c; j++)
+        {
+            scanf("%d", &A[i][j]);
+        }
+    }
+
+    // Matrix 2 ka size
+    int r2, c2;
+    scanf("%d %d", &r2, &c2);
+
+    // Matrix 2 input
+    for(int i = 0; i < r2; i++)
+    {
+        for(int j = 0; j < c2; j++)
+        {
+            scanf("%d", &B[i][j]);
+        }
+    }
+
+    // Addition
+    for(int i = 0; i < r; i++)
+    {
+        for(int j = 0; j < c; j++)
+        {
+            C[i][j] = A[i][j] + B[i][j];
+        }
+    }
+
+    // Result print
+    for(int i = 0; i < r; i++)
+    {
+        for(int j = 0; j < c; j++)
+        {
+            printf("%d ", C[i][j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
