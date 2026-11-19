@@ -11,28 +11,26 @@ File updated successfully with appended text.
 
 */
 #include <stdio.h>
-
 int main()
 {
-    FILE *fp;
-    char str[100];
-
-    fp = fopen("data.txt", "a");
-
-    if(fp == NULL)
+    FILE *ptr;
+    char sahil[50];
+    ptr = fopen("sahil.text","w");
+    if(ptr== NULL)
     {
-        printf("File cannot be opened.");
-        return 1;
+    printf("file con not br open");
+    return 1;
     }
+    printf("enter youe text");
+    fgets(sahil, 50 ,stdin);
+    fprintf(ptr , "\n%s" , sahil);
+    fclose;
+    printf("sahil.text flie updated sussefully with write mode");
+    return 0;
 
-    printf("Enter a line of text: ");
-    fgets(str, sizeof(str), stdin);
 
-    fprintf(fp, "\n%s", str);
 
-    fclose(fp);
 
-    printf("File updated successfully with appended text.");
 
     return 0;
 }
